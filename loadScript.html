@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<script>
+  function loadScript(url, cb) {
+    var sc = document.createElement('script');
+    sc.src = url;
+    sc.onload = sc.onreadystatechange = cb;
+    document.body.appendChild(sc);
+  }
+</script>
+<script>
+  loadScript('http://cdn.bootcss.com/jquery/1.10.2/jquery.min.js', function () {
+    console.log($('body'));
+  });
+</script>
+</body>
+</html>
